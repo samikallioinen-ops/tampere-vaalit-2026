@@ -1533,7 +1533,7 @@ function ageView(){
   const parishRows=parishIds.map(id=>({id,name:pp(id).name,stats:AGE_SUMMARY[id][state.role]}));
   const share=v=>n?dec(100*v/n,1)+" %":"–";
   let out=section(`Ikärakenne · ${state.parish==="all"?"Neljä seurakuntaa":pp(state.parish).name}`,
-    "Vuoden 2026 valittujen ikäjakauma vaalikoneen tietojen perusteella.",
+    "Vuoden 2026 valittujen ikäjakauma vaalikoneen tietojen perusteella." + (state.parish==="all" ? " Sopuvaalin vuoksi Ruotsalaisen seurakunnan tietoja ei ole saatavilla." : ""),
     state.role==="C"?"Yhteinen kirkkovaltuusto":"Seurakuntaneuvostot");
   out+=`<div class="grid kpis">${metric("Keski-ikä",dec(mean,1)+" v","Valitussa toimielimessä")}${metric("18–30-vuotiaita",dist[0]+" / "+n,share(dist[0])+" valituista")}${metric("66 vuotta täyttäneitä",dist[3]+" / "+n,share(dist[3])+" valituista")}${metric("Ikätieto saatavissa",n+" / "+n,"100 % tarkastelluista")}</div>`;
   out+=`<div class="age-legend">${AGE_GROUPS.map(g=>`<span><i class="age-dot" style="background:${g.color}"></i>${g.label} vuotta</span>`).join("")}</div>`;
