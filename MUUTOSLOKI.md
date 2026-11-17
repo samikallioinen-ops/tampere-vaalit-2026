@@ -1,5 +1,15 @@
 # Muutosloki – Tampereen seurakuntavaalit 2026
 
+### 17.11.2026 – Vaalikohtaiset henkilöäänet tarkistettu
+
+- Käyttäjän toimittamista neljästä seurakuntakohtaisesta tulospalvelun CSV-tiedostosta luettiin erikseen ylempi **yhteisen kirkkovaltuuston vaali** ja alempi **seurakuntaneuvoston vaali**. Molemmista käsiteltiin vain merkinnällä `Valittu` olevat henkilöt.
+- Verrattiin 113 henkilö-/toimielin-/seurakuntatietuetta täsmällisellä nimiosumalla dashboardiin: **49 kirkkovaltuuston ääntä täsmäsivät jo ennestään**, **64 seurakuntaneuvoston äänimäärää lisättiin**. Ei puuttuvia tai ristiriitaisia osumia.
+- Sekä yhteiseen kirkkovaltuustoon että seurakuntaneuvostoon valituille käytetään **kummankin vaalin omia ääniä**.
+- Valitut henkilöt -näkymän lajittelut täsmennettiin kahdeksi vaihtoehdoksi: **Sukunimen mukaan (A–Ö)** ja **Äänimäärän mukaan (suurin ensin)**. Äänimäärä ei ole valintajärjestys (valinnan ratkaisee vertausluku).
+- `neuvosto_aanet.csv` täydennettiin 64 lukuarvolla, ja numerot lisättiin myös itse dashboardin dataan, jotta ne toimivat ilman erillistä tiedostolatausta.
+- Lähdetiedostot ladattu vaalien tulospalvelusta 17.11.2026. Tulokset saattavat vielä muuttua ennen vahvistamista.
+
+
 Dashboard: https://samikallioinen-ops.github.io/tampere-vaalit-2026/
 
 ## 17.11.2026 – Luettavuus, lajittelu ja tietojen täydentäminen
