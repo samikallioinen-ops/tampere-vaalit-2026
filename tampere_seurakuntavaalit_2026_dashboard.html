@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tampereen seurakuntavaalit 2026 — Interaktiivinen tulosnäkymä</title>
+<meta name="description" content="Tampereen seurakuntavaalien 2026 tulokset, vertailut 2022–2026, valitut ja edustavuus. Interaktiivinen prototyyppi.">
+<style>
+:root{--ink:#172c39;--muted:#647580;--border:#e1e8e7;--bg:#f6f8f7;--paper:#fff;--navy:#102d3b;--teal:#197f86;--orange:#ed8057;--soft:#edf4f1;--green:#207662;--orange-soft:#fff0e8;--shadow:0 8px 28px rgba(24,55,65,.055)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,'Segoe UI',system-ui,-apple-system,sans-serif;line-height:1.47}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #71c5c6;outline-offset:3px}a{color:#126d86;text-decoration:none}a:hover{text-decoration:underline}.wrap{max-width:1320px;margin:0 auto;padding:0 34px}.top{background:var(--navy);color:#f7fbfa;position:relative;overflow:hidden}.top:before{content:"";position:absolute;border:1px solid rgba(255,255,255,.09);width:600px;height:600px;border-radius:50%;right:-225px;top:-330px;box-shadow:0 0 0 70px rgba(255,255,255,.025),0 0 0 145px rgba(255,255,255,.018);pointer-events:none}.topinner{padding-top:24px;padding-bottom:34px;position:relative}.masthead{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:45px}.brand{display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:.09em;text-transform:uppercase;font-weight:780}.mark{width:31px;height:31px;border:2px solid #b2e8dc;display:grid;place-items:center;border-radius:9px;font-weight:850;color:#b2e8dc;letter-spacing:0}.topright{font-size:12px;color:#c8d9dd;text-align:right}.hero{display:flex;justify-content:space-between;gap:40px;align-items:end}.eyebrow{color:#9bcfc6;text-transform:uppercase;letter-spacing:.16em;font-weight:790;font-size:11px}.hero h1{font-size:clamp(35px,4.5vw,61px);max-width:740px;font-weight:730;letter-spacing:-.055em;line-height:1.04;margin:15px 0 19px}.hero p{font-size:16px;max-width:700px;color:#c8d9dc;margin:0}.hero-side{flex:0 0 245px;padding:20px;border:1px solid #53727b;border-radius:15px;background:#173a49;box-shadow:var(--shadow)}.hero-side strong{font-size:37px;letter-spacing:-.04em;display:block;line-height:1.2}.hero-side small{color:#c4d4d8;display:block;margin-top:6px}.live{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:11px;color:#ddf0e4;margin-bottom:14px}.dot{width:8px;height:8px;background:#f3b268;border-radius:50%}.tabshell{background:#fff;border-bottom:1px solid var(--border);position:sticky;z-index:20;top:0}.tabs{display:flex;gap:10px;flex-wrap:wrap;padding-top:9px;align-items:center}.tab{border:0;border-bottom:3px solid transparent;color:#61737e;background:transparent;padding:12px 17px;font-weight:720;font-size:13px;white-space:nowrap}.tab:hover{color:var(--ink)}.tab.active{color:var(--ink);border-bottom-color:var(--orange)}.filterbar{display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center;gap:18px;padding:25px 0 18px}.group-label{font-size:11px;color:#78858b;font-weight:750;text-transform:uppercase;letter-spacing:.095em;margin-bottom:9px}.filters{display:flex;gap:6px;flex-wrap:wrap}.pill{border:1px solid #dbe5e4;background:#fff;border-radius:9px;color:#596d77;padding:9px 13px;font-size:12px;font-weight:730;transition:.15s}.pill:hover{background:#eff7f5}.pill.active{border-color:#214d55;background:#214d55;color:white}.mini-info{font-size:12px;color:#7e8b90;align-self:end;padding-bottom:11px}.content{padding-bottom:38px;min-height:560px}.sectiontop{display:flex;align-items:end;justify-content:space-between;gap:25px;margin:13px 0 18px}.sectiontop h2{font-size:25px;letter-spacing:-.035em;line-height:1.16;margin:0 0 6px}.sectiontop p{margin:0;color:var(--muted);font-size:13px}.rightnote{color:#7f8b91;font-size:12px;text-align:right}.grid{display:grid;gap:18px}.kpis{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:20px}.kpis3{grid-template-columns:repeat(3,minmax(0,1fr))}.panel{background:var(--paper);border:1px solid var(--border);border-radius:15px;box-shadow:var(--shadow);padding:22px}.metric{min-height:153px}.metric .label{font-size:12px;font-weight:720;color:#677b85}.metric .number{font-weight:760;font-size:36px;letter-spacing:-.045em;margin:14px 0 8px;line-height:1}.metric .detail{font-size:12px;color:#697c83}.pos{color:#17836f;font-weight:760}.neg{color:#ad6155;font-weight:760}.subgrid{grid-template-columns:minmax(0,1.45fr) minmax(300px,1fr)}.panel h3{font-size:17px;letter-spacing:-.02em;margin:0 0 4px}.lead{margin:0 0 23px;font-size:12px;color:#77858c}.bigstory{border-left:4px solid var(--orange);padding:3px 0 4px 17px;margin-bottom:24px}.bigstory strong{font-size:19px;letter-spacing:-.035em}.bigstory p{font-size:13px;color:#687c85;margin:5px 0 0}.chip{display:inline-flex;font-size:11px;padding:4px 8px;border-radius:6px;font-weight:730;background:#edf6f2;color:#337363}.note{font-size:12px;color:#6f7f86;margin:15px 0 0}.barrow{display:grid;grid-template-columns:115px minmax(0,1fr) 61px;align-items:center;gap:13px;margin:16px 0;font-size:13px}.barrow .nm{font-weight:640;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.track{height:13px;border-radius:99px;background:#edf1f0;position:relative;overflow:hidden}.fill{height:100%;background:#278989;border-radius:99px}.fill.past{background:#cbd4d8;position:absolute;left:0;top:0;height:100%}.fill.now{background:#258b8a;position:absolute;left:0;top:0;height:100%;opacity:.9}.barval{text-align:right;font-weight:770;font-size:13px}.legendline{display:flex;gap:16px;flex-wrap:wrap;align-items:center;color:#657980;font-size:12px}.swatch{width:10px;height:10px;border-radius:3px;display:inline-block;margin-right:6px}.clickrow{border:0;background:none;text-align:left;width:100%;padding:0}.clickrow:hover .nm{text-decoration:underline;color:#147580}.stories{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:19px}.story{border:1px solid var(--border);border-radius:13px;padding:18px;background:#fff;text-align:left;min-height:145px;transition:transform .18s,box-shadow .18s}.story:hover{transform:translateY(-2px);box-shadow:var(--shadow)}.story .ico{font-size:22px;display:block;margin-bottom:11px}.story strong{display:block;font-size:14px}.story span:last-child{display:block;color:#70818a;font-size:12px;margin-top:6px}.chart-wrap{width:100%;overflow:hidden}.chart-wrap svg{display:block;width:100%;height:auto}.chart-note{font-size:11px;color:#7b8d93;margin-top:8px}.statsline{display:flex;gap:28px;flex-wrap:wrap;margin:16px 0}.smallstat{font-size:12px;color:#77868c}.smallstat strong{font-size:23px;letter-spacing:-.03em;display:block;color:#183c47}.tablewrap{overflow-x:auto}.simple-table{border-collapse:collapse;width:100%;font-size:13px}.simple-table th{color:#71828a;text-align:left;font-weight:690;font-size:11px;letter-spacing:.025em;background:#f6f9f8}.simple-table td,.simple-table th{padding:12px 12px;border-bottom:1px solid #edf1f0;white-space:nowrap}.simple-table tbody tr:last-child td{border-bottom:0}.simple-table td.num,.simple-table th.num{text-align:right;font-variant-numeric:tabular-nums}.simple-table tbody tr:hover{background:#f7faf9}.simple-table button.linkcell{border:0;background:none;color:#17737e;font-weight:760;padding:0;text-align:left}.series{display:flex;align-items:center;gap:7px;margin:12px 0}.sidelabel{flex:0 0 122px;font-size:12px;font-weight:710;color:#40535d;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.stack{display:flex;flex:1;min-width:0;height:30px;border-radius:6px;overflow:hidden;background:#edf1f1}.segment{display:block;height:100%;padding:0;min-width:0;border:0;border-right:2px solid white;color:#132b34;text-align:center;font-size:10px;font-weight:820;line-height:30px;transition:filter .15s;white-space:nowrap;overflow:hidden}.segment:hover{filter:brightness(.91)}.segment.muted{opacity:.26}.stacktotal{flex:0 0 30px;text-align:right;font-size:13px;font-weight:740}.seat-legend{display:flex;gap:9px;flex-wrap:wrap;margin:16px 0 19px}.lgbtn{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid var(--border);background:#fff;border-radius:7px;font-size:11px;font-weight:730;color:#445860}.lgbtn.selected{background:#e9f3ef;border-color:#8ac3b7}.lgbtn .swatch{margin:0}.muted-txt{color:#849297}.yearhead{font-size:11px;color:#87959b;text-transform:uppercase;letter-spacing:.08em;font-weight:760;margin:24px 0 7px}.activegroup{background:#eef6f2;padding:13px 16px;border-radius:9px;margin:12px 0;font-size:12px;display:flex;align-items:center;gap:12px;justify-content:space-between}.activegroup button{border:0;background:transparent;color:#216d73;font-weight:760}.row2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.compare{display:flex;align-items:center;gap:15px;margin-top:19px}.compare .compare-label{flex:0 0 117px;font-size:12px;font-weight:750}.compare .comp-bars{flex:1}.compbar{height:20px;border-radius:4px;background:#f0f4f3;margin:4px 0;position:relative;overflow:hidden}.compbar span{height:100%;display:block;border-radius:4px;background:#b8cdd2}.compbar.this span{background:#258a87}.compare .values{flex:0 0 74px;text-align:right;font-size:12px;line-height:28px;font-weight:760}.demoline{margin:14px 0}.demotop{display:flex;justify-content:space-between;gap:10px;font-size:12px;margin-bottom:5px}.demotop strong{font-size:13px}.demotrack{height:14px;background:#e5eeeb;border-radius:4px;overflow:hidden}.demotrack div{height:100%;background:#2a9290}.demotrack.secondary div{background:#c1d1d7}.demodiff{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.democard{background:#f6faf8;border:1px solid #e4ece8;border-radius:10px;padding:17px}.democard .num{font-size:30px;letter-spacing:-.03em;font-weight:790}.democard .desc{font-size:11px;color:#647982}.searchbox{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:10px 0 20px}.searchbox input{flex:1;min-width:180px;border:1px solid #d8e4e1;background:#fff;border-radius:9px;padding:12px 14px;color:#193943;font-size:14px}.searchbox select{border:1px solid #d8e4e1;border-radius:9px;background:#fff;padding:12px;color:#3f5961;font-size:12px}.resulthead{display:flex;justify-content:space-between;gap:15px;align-items:center;margin:10px 0;color:#71828b;font-size:12px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.person{width:100%;background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 18px 15px;text-align:left;min-height:134px;transition:.14s}.person:hover{border-color:#68aca7;box-shadow:0 7px 20px #3052510d;transform:translateY(-1px)}.person .person-head{display:flex;justify-content:space-between;gap:10px;align-items:start}.person .name{font-size:15px;font-weight:785;line-height:1.2;letter-spacing:-.015em}.person .votes{font-size:16px;font-weight:830;color:#163b4b;white-space:nowrap}.person .votes small{display:block;font-size:10px;color:#859196;font-weight:640;text-align:right}.person .sub{font-size:11px;color:#77888d;margin:9px 0 12px}.tagrow{display:flex;flex-wrap:wrap;gap:6px}.tag{font-size:10px;font-weight:710;color:#52717a;background:#edf3f5;padding:4px 7px;border-radius:6px}.tag.new{color:#977143;background:#fff1d9}.disclaimer{background:#fff9f1;border:1px solid #f0e3d3;border-radius:10px;padding:13px 17px;font-size:12px;color:#856e53;margin:15px 0}.source-list{display:grid;gap:12px}.source-row{border-bottom:1px solid #edf0ee;padding:11px 0;display:flex;justify-content:space-between;gap:12px;align-items:center}.source-row:last-child{border:0}.source-row strong{display:block;font-size:13px}.source-row small{font-size:11px;color:#76878d}.source-row a{font-size:12px;font-weight:760;white-space:nowrap}.sourcewarning{display:flex;gap:15px;padding:16px;background:#fff8ef;border-radius:9px;border:1px solid #f1e2cc;margin:12px 0;color:#655948;font-size:12px}.sourcewarning .symbol{font-size:20px;line-height:1}.footer{font-size:12px;color:#819197;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid #dfe8e7;padding:20px 0 50px}.footlink{font-weight:700}.actions{display:flex;gap:8px;flex-wrap:wrap}.actbtn{font-size:12px;color:#fff;background:#265968;border-radius:8px;padding:9px 13px;border:0;font-weight:730}.actbtn.secondary{background:#fff;color:#245a65;border:1px solid #c9dbd8}.modalback{position:fixed;inset:0;z-index:50;background:rgba(4,20,28,.6);display:flex;justify-content:center;align-items:center;padding:20px}.dialog{background:#fff;border-radius:16px;width:min(540px,100%);padding:28px;box-shadow:0 22px 90px #0c273a66;position:relative}.close{position:absolute;right:18px;top:16px;font-size:20px;background:#eef2f1;border:0;width:33px;height:33px;border-radius:9px}.dialog h2{font-size:29px;letter-spacing:-.04em;margin:6px 0 9px}.dialog dl{display:grid;grid-template-columns:1fr 1fr;gap:12px}.dialog dt{font-size:11px;color:#87969a}.dialog dd{font-size:14px;font-weight:760;margin:2px 0 0}.pillsee{border:0;background:none;color:inherit;padding:0;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;font-weight:inherit}.empty{padding:38px 25px;text-align:center;border:1px dashed #cbd8d7;border-radius:10px;color:#6f8087}.source-flag{font-size:10px;color:#69817e;letter-spacing:.05em;text-transform:uppercase;font-weight:760}.tiny{font-size:11px}.hintbox{display:flex;gap:13px;align-items:center;flex-wrap:wrap;justify-content:space-between;background:#ebf3f0;border:1px solid #d5e6e0;border-radius:11px;padding:17px 19px;margin-top:18px}.hintbox strong{font-size:13px}.hintbox span{display:block;color:#657d7d;font-size:12px}.nojs{max-width:700px;margin:50px auto;padding:20px;background:#fff9ec}
+@media(max-width:1040px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.subgrid{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-side{flex-basis:200px}.row2{grid-template-columns:1fr}}
+@media(max-width:680px){.wrap{padding:0 17px}.topinner{padding-top:18px;padding-bottom:31px}.masthead{margin-bottom:31px}.hero{display:block}.hero h1{font-size:39px}.hero-side{margin-top:26px;max-width:250px}.tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin}.tab{padding:13px 11px}.filterbar{padding-top:19px}.kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.kpis3{grid-template-columns:repeat(2,minmax(0,1fr))}.panel{padding:17px}.metric{min-height:130px}.metric .number{font-size:29px}.sectiontop h2{font-size:23px}.stories,.cards{grid-template-columns:1fr}.barrow{grid-template-columns:90px minmax(0,1fr) 50px;gap:8px}.barrow .nm{font-size:11px}.sidelabel{flex-basis:88px;font-size:11px}.stack{height:27px}.segment{line-height:27px}.demodiff{grid-template-columns:1fr 1fr}.hero-side strong{font-size:31px}.compare .compare-label{flex-basis:85px}.topright{font-size:10px}.person{min-height:108px}}
+@media print{.tabshell,.filterbar,.actions,.footer{display:none}.top{background:#fff;color:#152f3a}.hero p,.topright{color:#333}.hero-side{color:#333;background:#fff}.content{min-height:0}.panel{box-shadow:none}button{pointer-events:none}body{background:white}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap topinner">
+  <div class="masthead"><div class="brand"><span class="mark">T</span> TAMPERE <span style="opacity:.35">/</span> SEURAKUNTAVAALIT</div><div class="topright">VAALIT 15.11.2026 &nbsp; · &nbsp; KAUSI 2027–2030</div></div>
+  <div class="hero"><div><div class="eyebrow">Tulokset ja muutoksen suunta</div><h1>Miltä Tampereen uusi<br>seurakuntahallinto näyttää?</h1><p>Tutki äänestysaktiivisuutta, paikkajakoa ja valittuja — vertaa vaaleja, suodata seurakunnittain ja löydä muutokset lukujen takaa.</p></div><div class="hero-side"><div class="live"><span class="dot"></span> ALUSTAVAT TULOKSET · 16.11.2026</div><strong>10,6 %</strong><small>Äänestysaktiivisuus Tampereella</small><div style="height:1px;background:#42636c;margin:14px 0"></div><span style="color:#d6ebe6;font-size:13px;font-weight:700">▲ +2,0 prosenttiyksikköä vuodesta 2022</span></div></div>
+</div></header>
+<div class="tabshell"><nav class="wrap tabs" aria-label="Tulossivun osiot" id="tabs"></nav></div>
+<div class="wrap"><div class="filterbar"><div><div class="group-label">Valitse seurakunta</div><div class="filters" id="parishBtns"></div></div><div><div class="group-label">Toimielin</div><div class="filters" id="roleBtns"></div></div></div><main class="content" id="content" tabindex="-1" aria-live="polite"><noscript><p class="nojs">Tämä tulosnäkymä tarvitsee JavaScriptin interaktiivisia toimintoja varten.</p></noscript></main><footer class="footer"><span>Itsenäisesti toimiva konseptiprototyyppi · Tietoja ei haeta automaattisesti · 16.11.2026</span><span><a href="https://tampereenseurakunnat.fi/seurakuntavaalit/vaalitulokset/" target="_blank" rel="noopener">Vaalien alkuperäiset tulossivut</a></span></footer></div>
+<div id="modal"></div>
+<script>
+const DATA={
+  "parishes": [
+    {
+      "id": "E",
+      "name": "Eteläinen",
+      "turnout2026": 9.4,
+      "voters2026": 2841,
+      "turnout2022": 7.38,
+      "voters2022": 2247,
+      "turnout2018": 7.5,
+      "voters2018": 2237,
+      "femaleC": 9,
+      "femaleN": 13,
+      "newC": 11,
+      "newN": 13,
+      "under30C": 5,
+      "under30N": 5,
+      "invalid": 177,
+      "validC": 2775,
+      "validN": 2726,
+      "femaleC2022": 5,
+      "femaleN2022": 8,
+      "newC2022": 7,
+      "newN2022": 11,
+      "under30C2022": 1,
+      "under30N2022": 2
+    },
+    {
+      "id": "H",
+      "name": "Harju",
+      "turnout2026": 9.6,
+      "voters2026": 2492,
+      "turnout2022": 7.45,
+      "voters2022": 1918,
+      "turnout2018": 8.8,
+      "voters2018": 2183,
+      "femaleC": 8,
+      "femaleN": 11,
+      "newC": 7,
+      "newN": 9,
+      "under30C": 3,
+      "under30N": 3,
+      "invalid": 249,
+      "validC": 2365,
+      "validN": 2370,
+      "femaleC2022": 8,
+      "femaleN2022": 10,
+      "newC2022": 3,
+      "newN2022": 8,
+      "under30C2022": 0,
+      "under30N2022": 0
+    },
+    {
+      "id": "M",
+      "name": "Messukylä",
+      "turnout2026": 11.7,
+      "voters2026": 3588,
+      "turnout2022": 9.45,
+      "voters2022": 3014,
+      "turnout2018": 10.0,
+      "voters2018": 3296,
+      "femaleC": 9,
+      "femaleN": 11,
+      "newC": 7,
+      "newN": 9,
+      "under30C": 1,
+      "under30N": 2,
+      "invalid": 192,
+      "validC": 3511,
+      "validN": 3469,
+      "femaleC2022": 10,
+      "femaleN2022": 12,
+      "newC2022": 7,
+      "newN2022": 9,
+      "under30C2022": 2,
+      "under30N2022": 2
+    },
+    {
+      "id": "T",
+      "name": "Tuomiokirkko",
+      "turnout2026": 11.4,
+      "voters2026": 4223,
+      "turnout2022": 9.61,
+      "voters2022": 3453,
+      "turnout2018": 10.3,
+      "voters2018": 3363,
+      "femaleC": 9,
+      "femaleN": 12,
+      "newC": 8,
+      "newN": 5,
+      "under30C": 5,
+      "under30N": 4,
+      "invalid": 269,
+      "validC": 4073,
+      "validN": 4042,
+      "femaleC2022": 9,
+      "femaleN2022": 11,
+      "newC2022": 6,
+      "newN2022": 10,
+      "under30C2022": 2,
+      "under30N2022": 3
+    },
+    {
+      "id": "S",
+      "name": "Ruotsalainen",
+      "turnout2026": null,
+      "voters2026": null,
+      "turnout2022": null,
+      "voters2022": null,
+      "turnout2018": null,
+      "voters2018": null,
+      "femaleC": 2,
+      "femaleN": 4,
+      "newC": 1,
+      "newN": 3,
+      "under30C": 0,
+      "under30N": 0,
+      "invalid": null,
+      "validC": null,
+      "validN": null,
+      "femaleC2022": 2,
+      "femaleN2022": 6,
+      "newC2022": 1,
+      "newN2022": 4,
+      "under30C2022": 0,
+      "under30N2022": 0
+    }
+  ],
+  "groups": [
+    {
+      "id": "KK",
+      "name": "Kaikkien kirkko",
+      "short": "Kaikkien kirkko",
+      "color": "#2d8da6"
+    },
+    {
+      "id": "YV",
+      "name": "Yhdistynyt seurakuntaväki",
+      "short": "Seurakuntaväki",
+      "color": "#b07bdb"
+    },
+    {
+      "id": "KD",
+      "name": "Kirkkodemarit ja sitoutumattomat",
+      "short": "Kirkkodemarit",
+      "color": "#e9a34a"
+    },
+    {
+      "id": "KOK",
+      "name": "Kokoomus ja sitoutumattomat",
+      "short": "Kokoomus",
+      "color": "#4c75cf"
+    },
+    {
+      "id": "VAS",
+      "name": "Vasemmisto",
+      "short": "Vasemmisto",
+      "color": "#ec6d79"
+    },
+    {
+      "id": "EK",
+      "name": "Elävä kirkko",
+      "short": "Elävä kirkko",
+      "color": "#4db8a4"
+    },
+    {
+      "id": "KOHT",
+      "name": "Kohtaamisen kirkko",
+      "short": "Kohtaamisen kirkko",
+      "color": "#a9b4b9"
+    },
+    {
+      "id": "SOP",
+      "name": "Sopuvaalissa valitut",
+      "short": "Sopuvaali",
+      "color": "#9b9ca6"
+    }
+  ],
+  "seats": {
+    "2026": {
+      "C": {
+        "E": [
+          4,
+          5,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "H": [
+          3,
+          5,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "M": [
+          3,
+          1,
+          3,
+          3,
+          0,
+          3,
+          0,
+          0
+        ],
+        "T": [
+          4,
+          3,
+          2,
+          3,
+          1,
+          0,
+          0,
+          0
+        ],
+        "S": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "N": {
+        "E": [
+          6,
+          7,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "H": [
+          5,
+          6,
+          2,
+          2,
+          1,
+          0,
+          0,
+          0
+        ],
+        "M": [
+          3,
+          2,
+          3,
+          3,
+          0,
+          4,
+          1,
+          0
+        ],
+        "T": [
+          5,
+          4,
+          3,
+          3,
+          1,
+          0,
+          0,
+          0
+        ],
+        "S": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8
+        ]
+      }
+    },
+    "2022": {
+      "C": {
+        "E": [
+          4,
+          4,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "H": [
+          3,
+          4,
+          1,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        "M": [
+          3,
+          2,
+          2,
+          4,
+          0,
+          2,
+          0,
+          0
+        ],
+        "T": [
+          5,
+          3,
+          1,
+          3,
+          1,
+          0,
+          0,
+          0
+        ],
+        "S": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "N": {
+        "E": [
+          6,
+          6,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "H": [
+          5,
+          6,
+          1,
+          4,
+          0,
+          0,
+          0,
+          0
+        ],
+        "M": [
+          3,
+          3,
+          3,
+          4,
+          0,
+          3,
+          0,
+          0
+        ],
+        "T": [
+          6,
+          4,
+          2,
+          3,
+          1,
+          0,
+          0,
+          0
+        ],
+        "S": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8
+        ]
+      }
+    }
+  },
+  "candidates": [
+    {
+      "p": "E",
+      "g": "YV",
+      "name": "Mari Ahola",
+      "new": true,
+      "votes": 228,
+      "role": "C"
+    },
+    {
+      "p": "E",
+      "g": "YV",
+      "name": "Kalle Mäki",
+      "new": false,
+      "votes": 120,
+      "role": "C"
+    },
+    {
+      "p": "E",
+      "g": "YV",
+      "name": "Onni Erkkilä",
+      "new": true,
+      "votes": 109,
+      "role": "C"
+    },
+    {
+      "p": "E",
+      "g": "YV",
+      "name": "Aada Sihvonen",
+      "new": true,
+      "votes": 100,
+      "role": "C"
+    },
+    {
+      "p": "E",
+      "g": "YV",
+      "name": "Pauliina Huhtasalo",
+      "new": true,
+      "votes": 82,
+      "role": "C"
+    },
+    {
+      "p": "E",
+      "g": "KK",
+      "name": "Anni Ylinen",
+      "new": true,
+      "votes": 160,
+      "role": "C"
+    },
+    {
+      "p": "E",
+      "g": "KK",
+      "name": "Laura Haurinen Karhola",
+      "new": true,
+      "votes": 108,
+      "role": "C"
+    },
+    {
+      "p": "E",
+      "g": "KK",
+      "name": "Hulda Harju-Autti",
+      "new": true,
+      "votes": 100,
+      "role": "C"
+    },
+    {
+      "p": "E",
+      "g": "KK",
+      "name": "Onni Ylitalo",
+      "new": true,
+      "votes": 71,
+      "role": "C"
+    },
+    {
+      "p": "E",
+      "g": "KD",
+      "name": "Eija Kamppuri",
+      "new": true,
+      "votes": 106,
+      "role": "C"
+    },
+    {
+      "p": "E",
+      "g": "KD",
+      "name": "Sofia Haapalainen",
+      "new": true,
+      "votes": 76,
+      "role": "C"
+    },
+    {
+      "p": "E",
+      "g": "KOK",
+      "name": "Reeta Ahonen",
+      "new": true,
+      "votes": 104,
+      "role": "C"
+    },
+    {
+      "p": "H",
+      "g": "YV",
+      "name": "Seija Alatalo",
+      "new": false,
+      "votes": 289,
+      "role": "C"
+    },
+    {
+      "p": "H",
+      "g": "YV",
+      "name": "Maija Sutinen",
+      "new": false,
+      "votes": 141,
+      "role": "C"
+    },
+    {
+      "p": "H",
+      "g": "YV",
+      "name": "Emmi Erkkilä",
+      "new": true,
+      "votes": 89,
+      "role": "C"
+    },
+    {
+      "p": "H",
+      "g": "YV",
+      "name": "Anneli Hukari",
+      "new": false,
+      "votes": 83,
+      "role": "C"
+    },
+    {
+      "p": "H",
+      "g": "YV",
+      "name": "Sauli Kosonen",
+      "new": true,
+      "votes": 70,
+      "role": "C"
+    },
+    {
+      "p": "H",
+      "g": "KK",
+      "name": "Kalle Kalliomäki",
+      "new": true,
+      "votes": 140,
+      "role": "C"
+    },
+    {
+      "p": "H",
+      "g": "KK",
+      "name": "Meeri Järvi",
+      "new": true,
+      "votes": 92,
+      "role": "C"
+    },
+    {
+      "p": "H",
+      "g": "KK",
+      "name": "Johanna Valento",
+      "new": true,
+      "votes": 68,
+      "role": "C"
+    },
+    {
+      "p": "H",
+      "g": "KD",
+      "name": "Milla Lamminsivu",
+      "new": true,
+      "votes": 127,
+      "role": "C"
+    },
+    {
+      "p": "H",
+      "g": "KOK",
+      "name": "Lauri Erma",
+      "new": false,
+      "votes": 91,
+      "role": "C"
+    },
+    {
+      "p": "H",
+      "g": "VAS",
+      "name": "Sari Äkäslompolo",
+      "new": true,
+      "votes": 84,
+      "role": "C"
+    },
+    {
+      "p": "M",
+      "g": "EK",
+      "name": "Sari Tanus",
+      "new": false,
+      "votes": 301,
+      "role": "C"
+    },
+    {
+      "p": "M",
+      "g": "EK",
+      "name": "Lasse Heikkilä",
+      "new": true,
+      "votes": 135,
+      "role": "C"
+    },
+    {
+      "p": "M",
+      "g": "EK",
+      "name": "Lauri Holopainen",
+      "new": true,
+      "votes": 78,
+      "role": "C"
+    },
+    {
+      "p": "M",
+      "g": "KK",
+      "name": "Taru Kaario",
+      "new": false,
+      "votes": 168,
+      "role": "C"
+    },
+    {
+      "p": "M",
+      "g": "KK",
+      "name": "Saku Rautiainen",
+      "new": true,
+      "votes": 121,
+      "role": "C"
+    },
+    {
+      "p": "M",
+      "g": "KK",
+      "name": "Sofi Aalto-Setälä",
+      "new": true,
+      "votes": 85,
+      "role": "C"
+    },
+    {
+      "p": "M",
+      "g": "KOK",
+      "name": "Riina-Eveliina Eskelinen",
+      "new": false,
+      "votes": 200,
+      "role": "C"
+    },
+    {
+      "p": "M",
+      "g": "KOK",
+      "name": "Saija Pitkänen",
+      "new": true,
+      "votes": 171,
+      "role": "C"
+    },
+    {
+      "p": "M",
+      "g": "KOK",
+      "name": "Leena Silfverhuth",
+      "new": false,
+      "votes": 112,
+      "role": "C"
+    },
+    {
+      "p": "M",
+      "g": "KD",
+      "name": "Anne Liimola",
+      "new": true,
+      "votes": 83,
+      "role": "C"
+    },
+    {
+      "p": "M",
+      "g": "KD",
+      "name": "Salme Halme",
+      "new": false,
+      "votes": 80,
+      "role": "C"
+    },
+    {
+      "p": "M",
+      "g": "KD",
+      "name": "Sari Hänninen",
+      "new": true,
+      "votes": 73,
+      "role": "C"
+    },
+    {
+      "p": "M",
+      "g": "YV",
+      "name": "Matti Ilveskoski",
+      "new": false,
+      "votes": 111,
+      "role": "C"
+    },
+    {
+      "p": "T",
+      "g": "KK",
+      "name": "Anniina Halonen",
+      "new": false,
+      "votes": 264,
+      "role": "C"
+    },
+    {
+      "p": "T",
+      "g": "KK",
+      "name": "Senni Martikainen",
+      "new": true,
+      "votes": 148,
+      "role": "C"
+    },
+    {
+      "p": "T",
+      "g": "KK",
+      "name": "Anna Sääskilahti",
+      "new": true,
+      "votes": 132,
+      "role": "C"
+    },
+    {
+      "p": "T",
+      "g": "KK",
+      "name": "Venla Vuolanto",
+      "new": false,
+      "votes": 86,
+      "role": "C"
+    },
+    {
+      "p": "T",
+      "g": "YV",
+      "name": "Áron Salmi",
+      "new": true,
+      "votes": 190,
+      "role": "C"
+    },
+    {
+      "p": "T",
+      "g": "YV",
+      "name": "Tiina Eskelinen",
+      "new": false,
+      "votes": 176,
+      "role": "C"
+    },
+    {
+      "p": "T",
+      "g": "YV",
+      "name": "Riitta Sompa-Hokkanen",
+      "new": false,
+      "votes": 137,
+      "role": "C"
+    },
+    {
+      "p": "T",
+      "g": "KOK",
+      "name": "Marika Valjakka",
+      "new": true,
+      "votes": 179,
+      "role": "C"
+    },
+    {
+      "p": "T",
+      "g": "KOK",
+      "name": "Arttu Vuori",
+      "new": true,
+      "votes": 144,
+      "role": "C"
+    },
+    {
+      "p": "T",
+      "g": "KOK",
+      "name": "Jussi Kuortti",
+      "new": false,
+      "votes": 126,
+      "role": "C"
+    },
+    {
+      "p": "T",
+      "g": "KD",
+      "name": "Kaapo Asuma",
+      "new": true,
+      "votes": 131,
+      "role": "C"
+    },
+    {
+      "p": "T",
+      "g": "KD",
+      "name": "Maria Päivänen",
+      "new": true,
+      "votes": 115,
+      "role": "C"
+    },
+    {
+      "p": "T",
+      "g": "VAS",
+      "name": "Linda Salo",
+      "new": true,
+      "votes": 220,
+      "role": "C"
+    },
+    {
+      "p": "S",
+      "g": "SOP",
+      "name": "Tanja von Knorring",
+      "new": true,
+      "votes": null,
+      "role": "C"
+    },
+    {
+      "p": "S",
+      "g": "SOP",
+      "name": "Catarina Ståhle-Nieminen",
+      "new": false,
+      "votes": null,
+      "role": "C"
+    },
+    {
+      "p": "E",
+      "g": "YV",
+      "name": "Mari Ahola",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "E",
+      "g": "YV",
+      "name": "Onni Erkkilä",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "E",
+      "g": "YV",
+      "name": "Aada Sihvonen",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "E",
+      "g": "YV",
+      "name": "Pauliina Huhtasalo",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "E",
+      "g": "YV",
+      "name": "Ulla Louhivuori",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "E",
+      "g": "YV",
+      "name": "Kuisma Vesisenaho",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "E",
+      "g": "YV",
+      "name": "Jorma Salokanto",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "E",
+      "g": "KK",
+      "name": "Anni Ylinen",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "E",
+      "g": "KK",
+      "name": "Laura Haurinen Karhola",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "E",
+      "g": "KK",
+      "name": "Hulda Harju-Autti",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "E",
+      "g": "KK",
+      "name": "Hanna Lempinen",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "E",
+      "g": "KK",
+      "name": "Amu Urhonen",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "E",
+      "g": "KK",
+      "name": "Petra Laatikainen",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "E",
+      "g": "KD",
+      "name": "Eija Kamppuri",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "E",
+      "g": "KD",
+      "name": "Sofia Haapalainen",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "E",
+      "g": "KOK",
+      "name": "Reeta Ahonen",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "H",
+      "g": "YV",
+      "name": "Seija Alatalo",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "H",
+      "g": "YV",
+      "name": "Maija Sutinen",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "H",
+      "g": "YV",
+      "name": "Anneli Hukari",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "H",
+      "g": "YV",
+      "name": "Emmi Erkkilä",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "H",
+      "g": "YV",
+      "name": "Sauli Kosonen",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "H",
+      "g": "YV",
+      "name": "Tuomo Keskinen",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "H",
+      "g": "KK",
+      "name": "Kalle Kalliomäki",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "H",
+      "g": "KK",
+      "name": "Jaana Rothovius",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "H",
+      "g": "KK",
+      "name": "Meeri Järvi",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "H",
+      "g": "KK",
+      "name": "Marjo Kuortti",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "H",
+      "g": "KK",
+      "name": "Laura Koivurova",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "H",
+      "g": "KD",
+      "name": "Milla Lamminsivu",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "H",
+      "g": "KD",
+      "name": "Elisa Penders",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "H",
+      "g": "KOK",
+      "name": "Lauri Erma",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "H",
+      "g": "KOK",
+      "name": "Tero Arvonen",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "H",
+      "g": "VAS",
+      "name": "Sari Äkäslompolo",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "M",
+      "g": "EK",
+      "name": "Sari Tanus",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "M",
+      "g": "EK",
+      "name": "Lasse Heikkilä",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "M",
+      "g": "EK",
+      "name": "Lauri Holopainen",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "M",
+      "g": "EK",
+      "name": "Kari Kuusisto",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "M",
+      "g": "KK",
+      "name": "Taru Kaario",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "M",
+      "g": "KK",
+      "name": "Saku Rautiainen",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "M",
+      "g": "KK",
+      "name": "Emilia Nurminen",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "M",
+      "g": "KD",
+      "name": "Anne Liimola",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "M",
+      "g": "KD",
+      "name": "Salme Halme",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "M",
+      "g": "KD",
+      "name": "Sari Hänninen",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "M",
+      "g": "KOK",
+      "name": "Riina-Eveliina Eskelinen",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "M",
+      "g": "KOK",
+      "name": "Saija Pitkänen",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "M",
+      "g": "KOK",
+      "name": "Leena Silfverhuth",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "M",
+      "g": "YV",
+      "name": "Matti Ilveskoski",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "M",
+      "g": "YV",
+      "name": "Marika Puolimatka",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "M",
+      "g": "KOHT",
+      "name": "Sirpa Kuusela",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "T",
+      "g": "KK",
+      "name": "Anniina Halonen",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "T",
+      "g": "KK",
+      "name": "Senni Martikainen",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "T",
+      "g": "KK",
+      "name": "Anna Sääskilahti",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "T",
+      "g": "KK",
+      "name": "Marjo Majlund",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "T",
+      "g": "KK",
+      "name": "Venla Vuolanto",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "T",
+      "g": "YV",
+      "name": "Áron Salmi",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "T",
+      "g": "YV",
+      "name": "Tiina Eskelinen",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "T",
+      "g": "YV",
+      "name": "Riitta Sompa-Hokkanen",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "T",
+      "g": "YV",
+      "name": "Sirkka Simonen",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "T",
+      "g": "KOK",
+      "name": "Marika Valjakka",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "T",
+      "g": "KOK",
+      "name": "Arttu Vuori",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "T",
+      "g": "KOK",
+      "name": "Jussi Kuortti",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "T",
+      "g": "KD",
+      "name": "Kaapo Asuma",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "T",
+      "g": "KD",
+      "name": "Kirsi-Kaisa Sinisalo",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "T",
+      "g": "KD",
+      "name": "Maria Päivänen",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "T",
+      "g": "VAS",
+      "name": "Linda Salo",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "S",
+      "g": "SOP",
+      "name": "Markus Djupsund",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "S",
+      "g": "SOP",
+      "name": "Julia Hansson",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "S",
+      "g": "SOP",
+      "name": "Seppo Heino",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "S",
+      "g": "SOP",
+      "name": "Ronny Holmqvist",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "S",
+      "g": "SOP",
+      "name": "Gunnevi Kiiskinen",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "S",
+      "g": "SOP",
+      "name": "Tanja von Knorring",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "S",
+      "g": "SOP",
+      "name": "Catarina Ståhle-Nieminen",
+      "new": false,
+      "votes": null,
+      "role": "N"
+    },
+    {
+      "p": "S",
+      "g": "SOP",
+      "name": "Onni Thulesius",
+      "new": true,
+      "votes": null,
+      "role": "N"
+    }
+  ],
+  "city": {
+    "turnout2026": 10.6,
+    "voters2026": 13144,
+    "eligible2026": 123714,
+    "advanceElectorate2026": 7.3,
+    "advanceElectorate2022": 6.0,
+    "advancedShare2026": 68.4,
+    "age16to17Eligible": 3428,
+    "age16to17Voters": 173,
+    "turnout2022": 8.57,
+    "voters2022": 10632,
+    "turnout2018": 9.2,
+    "turnout2014": 11.7,
+    "turnout2010": 13.0,
+    "newC": 34,
+    "newN": 39,
+    "femaleC": 37,
+    "femaleN": 51,
+    "under30C": 14,
+    "under30N": 14,
+    "under30C2022": 5,
+    "under30N2022": 7,
+    "newC2022": 24,
+    "newN2022": 42,
+    "femaleC2022": 34,
+    "femaleN2022": 47,
+    "candidates2026": 410,
+    "candidates2022": 320,
+    "youngCandidates2026": 28,
+    "youngCandidates2022": 14
+  }
+};
+const {parishes,groups,seats,candidates,city}=DATA;
+const state={tab:'yleis',parish:'all',role:'C',group:'all',search:'',status:'all',sort:'votes',onlyChanges:false};
+const TABDATA=[['yleis','Tilannekuva'],['aanestys','Äänestäminen'],['paikat','Paikkajako'],['edustavuus','Edustavuus'],['valitut','Valitut henkilöt'],['lahteet','Tietolähteet']];
+const pp=id=>parishes.find(p=>p.id===id);const gg=id=>groups.find(g=>g.id===id);const fmt=n=>n==null?'–':new Intl.NumberFormat('fi-FI').format(n);
+const dec=(n,d=1)=>n==null?'–':n.toLocaleString('fi-FI',{minimumFractionDigits:d,maximumFractionDigits:d});
+const pct=n=>n==null?'–':dec(n,1)+' %';
+const signed=(n,suffix='')=>(n>0?'+':'')+dec(n,1)+suffix;
+const rr=()=>state.role==='C'?'yhteinen kirkkovaltuusto':'seurakuntaneuvostot';
+const relevant=()=>state.parish==='all'?parishes:parishes.filter(p=>p.id===state.parish);
+const totalSeats=(role=state.role)=>relevant().reduce((a,p)=>a+seats['2026'][role][p.id].reduce((x,y)=>x+y,0),0);
+const sum=(arr)=>arr.reduce((a,b)=>a+(b||0),0);
+const countAttr=(k)=>sum(relevant().map(p=>p[k]));
+const metric=(label,value,detail)=>`<article class="panel metric"><div class="label">${label}</div><div class="number">${value}</div><div class="detail">${detail}</div></article>`;
+const section=(title,subtitle,right='')=>`<div class="sectiontop"><div><h2>${title}</h2><p>${subtitle}</p></div>${right?`<div class="rightnote">${right}</div>`:''}</div>`;
+const heading=(txt,subtitle='')=>`<h3>${txt}</h3><p class="lead">${subtitle}</p>`;
+function countGroups(year,role,pids=relevant().map(p=>p.id)){let a=Array(groups.length).fill(0);pids.forEach(id=>seats[year][role][id].forEach((v,i)=>a[i]+=v));return a;}
+function renderNav(){document.getElementById('tabs').innerHTML=TABDATA.map(([id,label])=>`<button class="tab ${state.tab===id?'active':''}" data-tab="${id}" aria-current="${state.tab===id?'page':'false'}">${label}</button>`).join('');document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{state.tab=b.dataset.tab;state.group='all';updateHash();render();window.scrollTo({top:0,behavior:'smooth'});});document.getElementById('parishBtns').innerHTML=[['all','Kaikki'],...parishes.map(p=>[p.id,p.name])].map(([id,name])=>`<button class="pill ${state.parish===id?'active':''}" data-parish="${id}" aria-pressed="${state.parish===id}">${name}</button>`).join('');document.querySelectorAll('[data-parish]').forEach(b=>b.onclick=()=>{state.parish=b.dataset.parish;state.group='all';updateHash();render()});document.getElementById('roleBtns').innerHTML=[['C','Kirkkovaltuusto'],['N','Seurakuntaneuvostot']].map(([id,name])=>`<button class="pill ${state.role===id?'active':''}" data-role="${id}" aria-pressed="${state.role===id}">${name}</button>`).join('');document.querySelectorAll('[data-role]').forEach(b=>b.onclick=()=>{state.role=b.dataset.role;state.group='all';updateHash();render()})}
+function updateHash(){try{history.replaceState(null,'','#'+[state.tab,state.parish,state.role].join('/'));}catch(e){}}
+function barrows(rows,max=14,clickable=true){return rows.map(r=>{let name=r[0],val=r[1],d=r[2],id=r[3];return `<div class="barrow"><button class="clickrow nm" ${clickable&&id?`data-goparish="${id}"`:'disabled'}>${name}</button><div class="track"><div class="fill" style="width:${100*val/max}%"></div></div><div class="barval">${pct(val)}</div></div>`}).join('')}
+function setParish(id){state.parish=id;state.group='all';updateHash();render()}
+function bindParish(){document.querySelectorAll('[data-goparish]').forEach(b=>b.onclick=()=>setParish(b.dataset.goparish))}
+function cityLine(){const vals=[[2010,13],[2014,11.7],[2018,9.2],[2022,8.57],[2026,10.6]];const W=610,H=235,L=49,R=34,T=25,B=35;const minY=7.5,maxY=14.5;const x=i=>L+i*(W-L-R)/4, y=v=>T+(maxY-v)/(maxY-minY)*(H-T-B);const path=vals.map(([year,v],i)=>`${i?'L':'M'} ${x(i)} ${y(v)}`).join(' ');let grid=[8,10,12,14].map(v=>`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="#e1eae8" stroke-dasharray="3 4"/><text x="${L-10}" y="${y(v)+4}" fill="#859398" text-anchor="end" font-size="11">${v}%</text>`).join('');let dots=vals.map(([year,v],i)=>`<circle cx="${x(i)}" cy="${y(v)}" r="${i===4?7:5}" fill="${i===4?'#ee8a63':'#2b8b8b'}" stroke="white" stroke-width="3"><title>${year}: ${dec(v,2)} %</title></circle><text x="${x(i)}" y="${y(v)-16}" text-anchor="middle" fill="#304c56" font-size="12" font-weight="760">${dec(v,i===3?2:1)} %</text><text x="${x(i)}" y="${H-5}" fill="#788a90" text-anchor="middle" font-size="12">${year}</text>`).join('');return `<div class="chart-wrap"><svg role="img" aria-label="Tampereen äänestysprosentti 2010 13, 2014 11,7, 2018 9,2, 2022 8,57, 2026 10,6" viewBox="0 0 ${W} ${H}">${grid}<path d="${path}" fill="none" stroke="#318c88" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>${dots}</svg></div>`}
+function noTurnout(){return `<div class="disclaimer"><strong>Ruotsalaisessa seurakunnassa järjestettiin sopuvaali.</strong> Siksi sille ei esitetä omaa äänestysprosenttia. Valitut ja paikkajako sisältyvät koko Tampereen lukuihin.</div>`}
+function overview(){let ps=relevant(), p=state.parish==='all'?null:ps[0], n=totalSeats(),female=countAttr(state.role==='C'?'femaleC':'femaleN'),newc=countAttr(state.role==='C'?'newC':'newN'),under=countAttr(state.role==='C'?'under30C':'under30N');const voters=p?p.voters2026:city.voters2026;const turnout=p?p.turnout2026:city.turnout2026;const t22=p?p.turnout2022:city.turnout2022;const delta=(turnout??0)-(t22??0);let nam=p?p.name:'Koko Tampere';let out=section(`Tilannekuva · ${nam}`,'Viisi seurakuntaa, kaksi toimielintä ja yksi kokonaisuus','Vaihda seurakuntaa ja toimielintä yläreunasta.');out+=`<div class="grid kpis">${metric('Äänestysprosentti',pct(turnout),turnout===null?'Sopuvaali':`<span class="pos">${signed(delta,' %-yks.')}</span> vuodesta 2022`)}${metric('Äänestäneitä',fmt(voters),p&&p.id==='S'?'Ei äänestystä':state.parish==='all'?'123 714 äänioikeutettua':'Äänestäjät vuonna 2026')}${metric('Paikkoja toimielimessä',fmt(n),state.role==='C'?'Yhteinen kirkkovaltuusto':'Seurakuntaneuvostot yhteensä')}${metric('Uusia valittuja',`${newc} / ${n}`,pct(100*newc/n)+' · julkaistut yhteenvetoluvut')}</div>`;
+out+=`<div class="grid subgrid"><section class="panel">${heading('Äänestysaktiivisuuden muutos','Vertailu vuoden 2022 seurakuntavaaleihin')}${p&&p.id==='S'?noTurnout():`<div class="bigstory"><strong>${state.parish==='all'?'Ensimmäinen nousu nykyisessä seurakuntarakenteessa':p.name+' nosti osallistumisastettaan'}</strong><p>${p?`${pct(p.turnout2022)} → ${pct(p.turnout2026)}. Äänestäjiä ${fmt(p.voters2026-p.voters2022)} enemmän.`:`Äänestysaktiivisuus nousi 8,6 prosentista 10,6 prosenttiin. Äänestäjiä oli 2 512 enemmän kuin vuonna 2022.`}</p></div>${barrows(p?[[p.name,p.turnout2026,0,p.id]]:parishes.filter(x=>x.id!=='S').map(x=>[x.name,x.turnout2026,0,x.id]),14)}`}${!p?'<p class="note">Klikkaa seurakunnan nimeä avataksesi sen oman näkymän.</p>':''}</section><section class="panel">${heading('Miltä valittu toimielin näyttää?','Edustavuus julkaistujen yhteenvetolukujen perusteella')}<div class="demodiff"><div class="democard"><div class="num">${pct(100*female/n)}</div><div class="desc">naisia valituista</div></div><div class="democard"><div class="num">${pct(100*under/n)}</div><div class="desc">alle 30-vuotiaita</div></div><div class="democard"><div class="num">${pct(100*newc/n)}</div><div class="desc">uusia valittuja</div></div></div><div class="hintbox"><div><strong>Vertaa vaaleja 2022 ja 2026</strong><span>Onko uusi hallinto entistä edustavampi?</span></div><button class="actbtn secondary" data-switch="edustavuus">Tutki muutosta →</button></div></section></div>`;
+out+=`<div class="stories"><button class="story" data-switch="aanestys"><span class="ico">↗</span><strong>Äänestysaktiivisuus kääntyi kasvuun</strong><span>Vuoden 2022 jälkeen +2,0 prosenttiyksikköä. Aikasarja alkaa vuodesta 2010.</span></button><button class="story" data-switch="paikat"><span class="ico">▦</span><strong>Kaksi tasavahvaa suurinta ryhmää</strong><span>Kaikkien kirkko ja seurakuntaväki saivat kumpikin 14 valtuustopaikkaa koko Tampereella.</span></button><button class="story" data-switch="valitut"><span class="ico">♙</span><strong>Ketkä valittiin?</strong><span>Selaa 123 toimielinpaikan henkilötietoa, etsi nimellä ja rajaa ryhmittäin.</span></button></div>`;return out}
+function turnout(){let p=state.parish==='all'?null:pp(state.parish);let out=section('Äänestysaktiivisuus','Pitkän aikavälin kehitys ja seurakuntien erot','Vuoden 2026 tulos on alustava.');out+=`<div class="grid subgrid"><section class="panel">${heading('Koko Tampereen äänestysprosentti','Vuodet 2010–2026 · nykyisen seurakuntarakenteen vaaleista 2014 alkaen')}${cityLine()}<div class="statsline"><div class="smallstat">Kasvu 2022–2026<strong>+2,0 %-yks.</strong></div><div class="smallstat">Äänestäjiä enemmän<strong>+2 512</strong></div><div class="smallstat">Muutos äänestäjämäärässä<strong>+23,6 %</strong></div></div></section><section class="panel">${heading('Vuonna 2026','Äänestysaktiivisuuden eri mittareita')}<div class="demodiff"><div class="democard"><div class="num">7,3 %</div><div class="desc">äänioikeutetuista äänesti ennakkoon</div></div><div class="democard"><div class="num">68,4 %</div><div class="desc">ennakkoon äänestäneiden osuus kaikista äänestäjistä · tulospalvelun tieto</div></div><div class="democard"><div class="num">5,0 %</div><div class="desc">16–17-vuotiaiden äänestysaktiivisuus</div></div></div><p class="note">16–17-vuotiaita äänioikeutettuja oli 3 428 ja äänestäneitä 173. Vuonna 2022 ennakkoon äänesti 6,0 % äänioikeutetuista.</p><div class="hintbox"><div><strong>Ehdokkaita aiempaa enemmän</strong><span>410 ehdokasta vuonna 2026, 320 vuonna 2022 (+28,1 %). Enintään 30-vuotiaita ehdokkaita oli 28, aiemmin 14.</span></div></div></section></div>`;
+out+=`<section class="panel" style="margin-top:18px">${heading('Seurakuntien äänestysprosentit','Klikkaa seurakuntaa nähdäksesi sen muut tunnusluvut')}<div class="tablewrap"><table class="simple-table"><thead><tr><th>Seurakunta</th><th class="num">2018</th><th class="num">2022</th><th class="num">2026</th><th class="num">Muutos 2022–26</th><th class="num">Äänestäneitä 2026</th></tr></thead><tbody>${parishes.filter(x=>x.id!=='S'&&(!p||x.id===p.id)).map(x=>`<tr><td><button class="linkcell" data-goparish="${x.id}">${x.name}</button></td><td class="num">${pct(x.turnout2018)}</td><td class="num">${pct(x.turnout2022)}</td><td class="num"><b>${pct(x.turnout2026)}</b></td><td class="num pos">${signed(x.turnout2026-x.turnout2022,' %-yks.')}</td><td class="num">${fmt(x.voters2026)}</td></tr>`).join('')}${p&&p.id==='S'?'<tr><td colspan="6">Ruotsalaisen seurakunnan vaali toteutettiin sopuvaalina.</td></tr>':''}${!p?`<tr style="background:#f2f8f5;font-weight:760"><td>Koko Tampere</td><td class="num">9,2 %</td><td class="num">8,57 %</td><td class="num">10,6 %</td><td class="num pos">+2,03 %-yks.</td><td class="num">13 144</td></tr>`:''}</tbody></table></div></section>`;
+out+=`<div class="grid row2" style="margin-top:18px"><section class="panel">${heading('Hylätyt äänet · laskentamuistio','Työversio: valtuusto- ja neuvostoäänien yhteenlaskettu osuus')}${(p&&p.id==='S'?noTurnout():parishes.filter(x=>x.id!=='S'&&(!p||p.id===x.id)).map(x=>{let valid=x.validC+x.validN;let rate=x.invalid/(valid+x.invalid)*100;return `<div class="barrow"><span class="nm">${x.name}</span><div class="track"><div class="fill" style="width:${rate/6*100}%;background:#dc9f76"></div></div><span class="barval">${pct(rate)}</span></div>`}).join(''))}<p class="note">Osuudet laskettu aiemmassa työskentelyssä annetuista kelvollisten ja hylättyjen lippujen määristä. Tarkistettava vaalipöytäkirjoista ennen julkaisua.</p></section><section class="panel">${heading('Miten osallistuminen muuttui?','Ennakkoäänestyksen nousu on yksi kiinnostava jatkoanalyysin aihe')}${[ ['Ennakkoäänestys 2022',6.0],['Ennakkoäänestys 2026',7.3],['16–17-vuotiaat 2026',5.0]].map(([x,v])=>`<div class="barrow"><span class="nm">${x}</span><div class="track"><div class="fill" style="width:${v/15*100}%"></div></div><div class="barval">${pct(v)}</div></div>`).join('')}<p class="note">Kaikki kolme lukua ovat osuuksia kyseisen ryhmän äänioikeutetuista, eivät osuuksia kaikista annetuista äänistä.</p></section></div>`;return out}
+function renderStack(year,role,pids){let max=role==='C'?51:72;const listed=pids.map(pid=>{let a=seats[year][role][pid],n=sum(a);return `<div class="series"><span class="sidelabel">${pp(pid).name}</span><div class="stack">${a.map((val,i)=>!val?'':`<button title="${groups[i].name}: ${val} paikkaa" data-group="${groups[i].id}" class="segment ${state.group!=='all'&&state.group!==groups[i].id?'muted':''}" style="width:${100*val/n}%;background:${groups[i].color}">${val/n>.075?val:''}</button>`).join('')}</div><span class="stacktotal">${n}</span></div>`}).join('');let total=countGroups(year,role,pids);let n=sum(total);return listed+`<div class="series" style="border-top:1px solid #dfe9e6;padding-top:13px;margin-top:13px"><span class="sidelabel">Yhteensä</span><div class="stack">${total.map((val,i)=>!val?'':`<button title="${groups[i].name}: ${val} paikkaa" data-group="${groups[i].id}" class="segment ${state.group!=='all'&&state.group!==groups[i].id?'muted':''}" style="width:${100*val/n}%;background:${groups[i].color}">${val/n>.06?val:''}</button>`).join('')}</div><span class="stacktotal">${n}</span></div>`}
+function seatsView(){let pids=relevant().map(x=>x.id);let out=section('Paikkajako ryhmittäin','Vertaile vuoden 2026 kokoonpanoa edelliseen vaaliin','Palkkien osat ovat klikattavia.');out+=`<section class="panel">${heading(`${state.role==='C'?'Yhteinen kirkkovaltuusto':'Seurakuntaneuvostot'} · ${totalSeats()} paikkaa`,'Näet ryhmien sisäiset osuudet seurakunnittain ja koko valitussa kokonaisuudessa')}<div class="seat-legend">${groups.map(g=>`<button class="lgbtn ${state.group===g.id?'selected':''}" data-group="${g.id}"><i class="swatch" style="background:${g.color}"></i>${g.short}</button>`).join('')}</div>${state.group!=='all'?`<div class="activegroup"><span>Valittu ryhmä: <b>${gg(state.group).name}</b> · suodata henkilöt ryhmän perusteella</span><button data-clear-group>Poista rajaus ✕</button></div>`:''}<div class="yearhead">2026 · nyt</div>${renderStack('2026',state.role,pids)}<div class="yearhead">2022 · vertailuvuosi</div>${renderStack('2022',state.role,pids)}<p class="note">Palkin leveys esittää kunkin ryhmän osuutta kyseisen seurakunnan toimielimen paikoista. Vuoden 2022 Messukylän seurakuntaneuvoston Elävä kirkko -luku on oikaistu henkilönimien ja yhteissumman perusteella (3 paikkaa).</p></section>`;
+const recent=countGroups('2026',state.role),old=countGroups('2022',state.role);
+out+=`<div class="grid row2" style="margin-top:18px"><section class="panel">${heading('Ryhmien kokonaismuutokset','Paikkamäärä 2022 → 2026 valitussa näkymässä')}<div class="tablewrap"><table class="simple-table"><thead><tr><th>Ryhmä</th><th class="num">2022</th><th class="num">2026</th><th class="num">Muutos</th></tr></thead><tbody>${groups.filter(g=>state.group==='all'||state.group===g.id).map(g=>{let idx=groups.indexOf(g),a=old[idx],b=recent[idx],diff=b-a;return `<tr><td><span class="swatch" style="background:${g.color}"></span>${g.short}</td><td class="num">${a}</td><td class="num"><b>${b}</b></td><td class="num ${diff>0?'pos':diff<0?'neg':''}">${diff>0?'+':''}${diff}</td></tr>`}).join('')}</tbody></table></div></section><section class="panel">${heading('Yksittäisen ryhmän kautta henkilöihin','Valitse ryhmä yllä, niin tämän näkymän henkilöt löytyvät yhdellä klikkauksella')}<div class="hintbox"><div><strong>${state.group==='all'?'Kaikki valitut':gg(state.group).name}</strong><span>${state.group==='all'?totalSeats():recent[groups.findIndex(g=>g.id===state.group)]} paikkaa valitussa toimielimessä ja seurakunnassa.</span></div><button class="actbtn" id="toMembers">Näytä henkilöt →</button></div><p class="note">Ryhmiä käsitellään listavaalien vaaliryhminä, ei automaattisesti puolueina.</p></section></div>`;return out}
+function compareTwo(title,desc,label2022,label2026,base){return `<div class="compare"><div class="compare-label">${title}</div><div class="comp-bars"><div class="compbar"><span style="width:${100*label2022/base}%"></span></div><div class="compbar this"><span style="width:${100*label2026/base}%"></span></div></div><div class="values"><div>${label2022}</div><div>${label2026}</div></div></div>`}
+function demoCard(kind,label){let suffix=state.role;let ps=relevant();let n=totalSeats();let k2026=kind+suffix, k2022=kind+suffix+'2022';let curr=countAttr(k2026),before=countAttr(k2022);let pc=100*curr/n,pb=100*before/n;return `<section class="panel"><div class="source-flag">2022 <span class="swatch" style="background:#b8cdd2"></span> &nbsp; 2026 <span class="swatch" style="background:#258a87"></span></div>${heading(label,'Valittujen osuus toimielimen kaikista paikoista')}<div class="compare"><div class="compare-label">${label}</div><div class="comp-bars"><div class="compbar"><span style="width:${pb}%"></span></div><div class="compbar this"><span style="width:${pc}%"></span></div></div><div class="values"><div>${pct(pb)}</div><div>${pct(pc)}</div></div></div><p class="note">2022: ${before} / ${n} &nbsp;&nbsp; 2026: ${curr} / ${n} <span class="${curr>before?'pos':''}">(${curr>before?'+':''}${curr-before} henkilöä)</span></p></section>`}
+function demo(){const p=state.parish==='all'?null:pp(state.parish);let out=section('Edustavuus ja sukupolvenvaihdos','Miten naisten, nuorten ja uusien valittujen määrä muuttui vuodesta 2022?','Roolivalinta muuttaa kaikki vertailut.');out+=`<div class="grid kpis kpis3">${metric('Naisia valituista',pct(countAttr(state.role==='C'?'femaleC':'femaleN')/totalSeats()*100),'Vuoden 2026 osuus')}${metric('Uusia valittuja',`${countAttr(state.role==='C'?'newC':'newN')}`,`/ ${totalSeats()} paikkaa · julkaistu koonti`)}${metric('Alle 30-vuotiaita',`${countAttr(state.role==='C'?'under30C':'under30N')}`,`/ ${totalSeats()} paikkaa · vuonna 2026`)}</div>`;
+out+=`<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(275px,1fr))">${demoCard('female','Naisia')}${demoCard('new','Uusia')}${demoCard('under30','Alle 30-vuotiaita')}</div>`;
+out+=`<section class="panel" style="margin-top:18px">${heading('Seurakunnittain vuonna 2026','Valitut ja heidän osuutensa oman toimielimensä paikoista')}<div class="tablewrap"><table class="simple-table"><thead><tr><th>Seurakunta</th><th class="num">Paikkoja</th><th class="num">Naisia</th><th class="num">Uusia</th><th class="num">Alle 30 v.</th></tr></thead><tbody>${relevant().map(x=>{let n=sum(seats['2026'][state.role][x.id]),f=x['female'+state.role],nu=x['new'+state.role],u=x['under30'+state.role];return `<tr><td><button class="linkcell" data-goparish="${x.id}">${x.name}</button></td><td class="num">${n}</td><td class="num">${f} (${dec(100*f/n)} %)</td><td class="num">${nu} (${dec(100*nu/n)} %)</td><td class="num">${u} (${dec(100*u/n)} %)</td></tr>`}).join('')}</tbody></table></div></section>`;
+out+=`<div class="disclaimer">Uusien valittujen määrissä lähdeaineiston henkilötason merkinnät ja koontitaulukko eroavat seurakuntaneuvostoissa (erityisesti Tuomiokirkko: 5 koontitaulukossa ja 7 nimilistassa). Tässä edustavuuden vertailussa käytetään julkisen yhteenvetotaulukon lukuja; henkilönäkymässä näytetään nimilistan merkintä.</div>`;return out}
+function people(){let out=section('Valitut henkilöt','Henkilöluettelo, jossa haku ja suodatus ryhmän ja uutena valitsemisen mukaan','51 valtuustopaikkaa · 72 neuvostopaikkaa');out+=`<div class="searchbox"><input id="searchName" aria-label="Hae henkilöä nimellä" placeholder="Hae nimellä, esim. Tanus tai Halonen" value="${escapeHTML(state.search)}"><select id="groupSelect" aria-label="Valitse ryhmä"><option value="all">Kaikki ryhmät</option>${groups.map(g=>`<option value="${g.id}" ${state.group===g.id?'selected':''}>${g.name}</option>`).join('')}</select><select id="statusSelect" aria-label="Uudet tai jatkavat"><option value="all" ${state.status==='all'?'selected':''}>Kaikki valitut</option><option value="new" ${state.status==='new'?'selected':''}>Uutena valitut*</option><option value="old" ${state.status==='old'?'selected':''}>Jatkavat*</option></select><select id="sortSelect" aria-label="Lajittelujärjestys"><option value="votes" ${state.sort==='votes'?'selected':''}>Eniten ääniä ensin</option><option value="name" ${state.sort==='name'?'selected':''}>Aakkosjärjestys</option><option value="parish" ${state.sort==='parish'?'selected':''}>Seurakunnittain</option></select></div><div id="peopleResults"></div><p class="note">* Uusi / jatkava perustuu vuoden 2026 nimiluettelon merkintään. Neuvostojen yhteenvetotaulukossa esiintyy sen kanssa ristiriita. Valtuustovaalien henkilökohtaiset äänet on poimittu vaalien tulossivuilta; neuvostojen henkilöäänet eivät sisälly tähän prototyyppiin.</p>`;return out}
+const norm=s=>String(s).toLocaleLowerCase('fi').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+const escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function renderPeople(){let list=candidates.filter(x=>x.role===state.role&&(state.parish==='all'||x.p===state.parish)&&(state.group==='all'||x.g===state.group)&&(state.status==='all'||(state.status==='new'?x.new:!x.new))&&(!state.search||norm(x.name+' '+gg(x.g).name+' '+pp(x.p).name).includes(norm(state.search))));list.sort((a,b)=>state.sort==='votes'?((b.votes||0)-(a.votes||0)||a.name.localeCompare(b.name,'fi')):state.sort==='parish'?(pp(a.p).name.localeCompare(pp(b.p).name,'fi')||a.name.localeCompare(b.name,'fi')):a.name.localeCompare(b.name,'fi'));
+let target=document.getElementById('peopleResults');if(!target)return;target.innerHTML=`<div class="resulthead"><span><strong>${list.length}</strong> henkilöä rajauksella</span><span>Valittu toimielin: ${state.role==='C'?'valtuusto':'neuvostot'}</span></div>`+(list.length?`<div class="cards">${list.map((x)=>`<button class="person" data-person="${candidates.indexOf(x)}"><div class="person-head"><span class="name">${escapeHTML(x.name)}</span>${x.votes!=null?`<div class="votes">${fmt(x.votes)}<small>ääntä</small></div>`:''}</div><div class="sub">${pp(x.p).name} · ${gg(x.g).short}</div><div class="tagrow"><span class="tag">${state.role==='C'?'Kirkkovaltuusto':'Seurakuntaneuvosto'}</span>${x.new?'<span class="tag new">UUSI*</span>':''}</div></button>`).join('')}</div>`:`<div class="empty">Hakuehdoilla ei löytynyt henkilöitä. Kokeile väljempää rajausta.</div>`);target.querySelectorAll('[data-person]').forEach(b=>b.onclick=()=>showPerson(candidates[+b.dataset.person]));}
+function showPerson(x){document.getElementById('modal').innerHTML=`<div class="modalback" id="modalBack"><section role="dialog" aria-modal="true" aria-label="${escapeHTML(x.name)}" class="dialog"><button class="close" aria-label="Sulje tiedot" id="closeModal">×</button><div class="eyebrow" style="color:#237c7c">VAALIT 2026 · VALITTU</div><h2>${escapeHTML(x.name)}</h2><p class="muted-txt">${state.role==='C'?'Yhteinen kirkkovaltuusto':'Seurakuntaneuvosto'} · kausi 2027–2030</p><dl><div><dt>Seurakunta</dt><dd>${pp(x.p).name}</dd></div><div><dt>Ryhmä</dt><dd>${gg(x.g).name}</dd></div><div><dt>Henkilökohtaiset äänet</dt><dd>${x.votes===null?'Ei tässä aineistossa':fmt(x.votes)}</dd></div><div><dt>Uusiksi merkityt</dt><dd>${x.new?'UUSI (nimiluettelossa)':'Ei uutta merkintää'}</dd></div></dl><p class="note">Henkilökohtaiset äänimäärät eivät yksin määrää vaalimenestystä. Ryhmän vertausluku ratkaisee valintajärjestyksen.</p><a href="https://tampereenseurakunnat.fi/seurakuntavaalit/vaalitulokset/valitut-ryhmittain/" target="_blank" rel="noopener">Alkuperäinen valittujen luettelo ↗</a></section></div>`;document.getElementById('closeModal').onclick=closeModal;document.getElementById('modalBack').onclick=e=>{if(e.target.id==='modalBack')closeModal()};document.addEventListener('keydown',escModal,{once:true});document.getElementById('closeModal').focus()}
+function escModal(e){if(e.key==='Escape')closeModal()};function closeModal(){document.getElementById('modal').innerHTML=''}
+function sources(){const urls=[['Vaalitulokset 2026','Äänestysaktiivisuus, valtuustoon valitut ja henkilökohtaiset äänimäärät','https://tampereenseurakunnat.fi/seurakuntavaalit/vaalitulokset/'],['Valitut ryhmittäin 2026','Kaikki toimielinten valitut ja ryhmäkohtainen paikkajako','https://tampereenseurakunnat.fi/seurakuntavaalit/vaalitulokset/valitut-ryhmittain/'],['Valitut iän ja sukupuolen mukaan','Uusien, naisten ja alle 30-vuotiaiden yhteenvedot','https://tampereenseurakunnat.fi/seurakuntavaalit/vaalitulokset/valitut-ian-ja-sukupuolen-mukaan/'],['Vaalitulokset 2022','Edellinen paikkajako, edustavuus ja 2018-vertailut','https://tampereenseurakunnat.fi/seurakuntavaalit/vaalitulokset/tulokset-2022/'],['Ehdokkaat 2026','Ehdokkaiden määrä 410 sekä nuorten ehdokkaiden määrä','https://tampereenseurakunnat.fi/seurakuntavaaleissa-ehdokkaita-aiempaa-enemman/'],['Vuoden 2010 vertailu','Vaalien 2010 äänestysaktiivisuus Tampereella 13 %','https://vasenkaista.fi/2014/08/seurakuntavaaleissa-vasemmistolainen-vaihtoehto/'],['Vuoden 2014 vertailu','Tampereen äänestysaktiivisuus 11,7 %','https://yle.fi/a/3-7610892'],['Kirkkohallituksen vaalitiedote 16.11.2026','Tulosten alustavuus ja vahvistusaikataulu','https://evl.fi/tiedote/seurakuntavaalit-2026-tulosten-laskenta-kesken-monissa-suurissa-kaupungeissa-aanestysprosentit-nousivat/']];let out=section('Tietolähteet ja tarkistuslista','Prototyyppi on rakennettu julkaistuista vaalisivuista ja aiemmista laskentamuistioista.','Tietojen tarkistustilanne 16.11.2026.');out+=`<div class="grid subgrid"><section class="panel">${heading('Lähteet','Avaa alkuperäinen tilasto tai henkilöluettelo')}<div class="source-list">${urls.map(([name,desc,url])=>`<div class="source-row"><div><strong>${name}</strong><small>${desc}</small></div><a href="${url}" target="_blank" rel="noopener">Avaa ↗</a></div>`).join('')}</div></section><section class="panel">${heading('Julkaisuvalmiuden tarkistukset','Datalaatuongelmat, jotka on tärkeä ratkaista ennen tuotantokäyttöä')}<div class="sourcewarning"><span class="symbol">⚠</span><div><strong>Uusien luottamushenkilöiden määrä.</strong> Vuoden 2026 seurakuntaneuvostojen koonti ilmoittaa 39 uutta, henkilörivien merkinnöistä syntyy 41 (Tuomiokirkko 5 vs. 7). Myös Ylen uutisessa on valtuuston uutuusluvusta poikkeava luku (37 vs. taulukon 34).</div></div><div class="sourcewarning"><span class="symbol">⚠</span><div><strong>2018 äänimäärien summa.</strong> Vuoden 2022 tulossivun vuoden 2018 seurakuntaluvut summautuvat 11 079:ään, mutta taulukon yhteensä-rivillä on 11 379. Näkymässä käytetään vain julkaistua 2018 kokonaisprosenttia 9,2.</div></div><div class="sourcewarning"><span class="symbol">⚠</span><div><strong>Messukylän vuoden 2022 paikkataulukko.</strong> Seurakuntaneuvostossa Elävä kirkko on taulukon seurakuntarivillä 4, mutta yhteissumma ja 16 valitun nimilista tukevat kolmea paikkaa. Prototyypissä käytetään korjattua kolmea.</div></div><div class="sourcewarning"><span class="symbol">⚠</span><div><strong>Hylättyjen lippujen laskelma.</strong> Työskentelyssä annetut luvut (887 yhteensä) eivät ole vielä vastuutahon vahvistamassa julkaisuaineistossa. Käsitellään erillisenä työversiona.</div></div><div class="sourcewarning"><span class="symbol">⚠</span><div><strong>Vaalien vahvistus.</strong> Vaalilautakunnat vahvistavat tulokset keskiviikkona 18.11.2026. Tämän version lukuja ei päivitetä automaattisesti.</div></div></section></div>`;out+=`<div class="hintbox"><div><strong>Vie valittujen luettelo CSV-tiedostoon</strong><span>Lataa prototyypin sisältämä 123 henkilörivin aineisto suodattamattomana.</span></div><div class="actions"><button class="actbtn" id="exportCSV">Lataa CSV ↓</button><button class="actbtn secondary" onclick="window.print()">Tulosta tämä näkymä</button></div></div>`;return out}
+function csvDownload(){const head=['Toimielin','Seurakunta','Nimi','Ryhmä','Uusi nimiluettelossa','Äänet'];const lines=[head,...candidates.map(x=>[x.role==='C'?'Kirkkovaltuusto':'Seurakuntaneuvosto',pp(x.p).name,x.name,gg(x.g).name,x.new?'Kyllä':'Ei',x.votes??''])];let csv='\uFEFF'+lines.map(line=>line.map(v=>`"${String(v).replaceAll('"','""')}"`).join(';')).join('\r\n');let u=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));let a=document.createElement('a');a.href=u;a.download='tampereen_seurakuntavaalit_2026_valitut.csv';a.click();setTimeout(()=>URL.revokeObjectURL(u),500)}
+function render(){renderNav();const views={yleis:overview,aanestys:turnout,paikat:seatsView,edustavuus:demo,valitut:people,lahteet:sources};document.getElementById('content').innerHTML=views[state.tab]();bindParish();document.querySelectorAll('[data-switch]').forEach(b=>b.onclick=()=>{state.tab=b.dataset.switch;render();updateHash();window.scrollTo({top:0,behavior:'smooth'})});document.querySelectorAll('[data-group]').forEach(b=>b.onclick=()=>{state.group=state.group===b.dataset.group?'all':b.dataset.group;render()});const clear=document.querySelector('[data-clear-group]');if(clear)clear.onclick=()=>{state.group='all';render()};const members=document.getElementById('toMembers');if(members)members.onclick=()=>{state.tab='valitut';state.search='';render();updateHash();window.scrollTo({top:0,behavior:'smooth'})};if(state.tab==='valitut'){renderPeople();document.getElementById('searchName').oninput=e=>{state.search=e.target.value;renderPeople()};document.getElementById('groupSelect').onchange=e=>{state.group=e.target.value;renderPeople()};document.getElementById('statusSelect').onchange=e=>{state.status=e.target.value;renderPeople()};document.getElementById('sortSelect').onchange=e=>{state.sort=e.target.value;renderPeople()}}const exp=document.getElementById('exportCSV');if(exp)exp.onclick=csvDownload;}
+let hash=location.hash.replace(/^#/,'').split('/');if(TABDATA.some(t=>t[0]===hash[0]))state.tab=hash[0];if(hash[1]&&(hash[1]==='all'||parishes.some(p=>p.id===hash[1])))state.parish=hash[1];if(['C','N'].includes(hash[2]))state.role=hash[2];render();
+</script></body></html>
