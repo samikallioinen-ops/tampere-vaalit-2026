@@ -21,6 +21,7 @@
 .age-chart-label{font-weight:720;font-size:13px;color:var(--ink);text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .age-track{width:100%;height:35px;display:flex;overflow:hidden;border-radius:8px;background:#f0f3f2}
 .age-seg{appearance:none;border:0;min-width:0;min-height:35px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#fff;padding:0;transition:filter .12s}
+.age-seg .age-num{display:inline-flex;align-items:center;justify-content:center;min-width:20px;min-height:20px;padding:2px 5px;border-radius:5px;background:rgba(13,37,47,.9);color:#fff;font-size:13px;font-weight:850;line-height:1;font-variant-numeric:tabular-nums;box-shadow:0 1px 2px rgba(0,0,0,.18)}
 .age-seg:hover,.age-seg:focus-visible{filter:brightness(.86);outline-offset:-3px}
 .age-total{text-align:right;font-size:12px;font-weight:750;color:#6a7d85;white-space:nowrap}
 .age-statrow{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}
@@ -1540,7 +1541,7 @@ function ageView(){
   out+=`<div class="age-section"><section class="panel">${heading("Ikäjakauma seurakunnittain","Palkin leveys vastaa ikäryhmän osuutta seurakunnan valituista. Klikkaa väriosaa rajataksesi henkilöluetteloa.")}`;
   out+=parishRows.map(row=>{
     const nums=ageCohorts(row.people),len=row.people.length;
-    return `<div class="age-chart-row"><button class="age-chart-label linkcell" data-goparish="${row.id}">${row.name}</button><div class="age-track" role="group" aria-label="${row.name}: ikäryhmät">${nums.map((count,i)=>count?`<button class="age-seg" data-age-group="${i}" style="width:${100*count/len}%;background:${AGE_GROUPS[i].color}" title="${AGE_GROUPS[i].label} vuotta: ${count} henkilöä (${dec(100*count/len,1)} %)" aria-label="${row.name}, ${AGE_GROUPS[i].label} vuotta, ${count} henkilöä">${count/len>=.13?count:""}</button>`:"").join("")}</div><span class="age-total">n=${len}</span></div>`;
+    return `<div class="age-chart-row"><button class="age-chart-label linkcell" data-goparish="${row.id}">${row.name}</button><div class="age-track" role="group" aria-label="${row.name}: ikäryhmät">${nums.map((count,i)=>count?`<button class="age-seg" data-age-group="${i}" style="width:${100*count/len}%;background:${AGE_GROUPS[i].color}" title="${AGE_GROUPS[i].label} vuotta: ${count} henkilöä (${dec(100*count/len,1)} %)" aria-label="${row.name}, ${AGE_GROUPS[i].label} vuotta, ${count} henkilöä">${count/len>.06?`<span class="age-num">${count}</span>`:""}</button>`:"").join("")}</div><span class="age-total">n=${len}</span></div>`;
   }).join("");
   out+=`<p class="note">Jokainen toimielinpaikka lasketaan siihen toimielimeen, johon henkilö on valittu. Jos henkilö on valittu molempiin, hän näkyy kummankin toimielimen tilastoissa.</p></section>`;
   out+=`<section class="panel">${heading("Ikäryhmien osuus", "Valittu seurakunta ja toimielin")}`;
